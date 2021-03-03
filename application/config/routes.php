@@ -83,6 +83,7 @@ $route['adminProducts'] = 'adminProducts';
 $route['deleteProduct'] = 'adminProducts/deleteProduct';
 $route['saveProduct'] = 'adminProducts/saveProduct';
 $route['viewProduct'] = 'adminProducts/viewProduct';
+$route['editProduct'] = 'adminProducts/editProduct';
 $route['addProduct'] = 'adminProducts/addProduct';
 
 $route['adminCustomers'] = 'adminCustomers';
