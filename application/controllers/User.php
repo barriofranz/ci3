@@ -23,6 +23,7 @@ class User extends CI_Controller {
 		$this->load->library(array('session'));
 		$this->load->helper(array('url'));
 		$this->load->model('user_model');
+		$this->load->model('customers_model');
 
 
 
@@ -70,8 +71,19 @@ class User extends CI_Controller {
 			$username = $this->input->post('username');
 			$email    = $this->input->post('email');
 			$password = $this->input->post('password');
+			$firstname = $this->input->post('firstname');
+			$lastname = $this->input->post('lastname');
+			$address = $this->input->post('address');
 
-			if ($this->user_model->create_user($username, $email, $password)) {
+			if ($userid = $this->user_model->create_user($username, $email, $password)) {
+
+				$customer = [
+					'id_customer' => $userid,
+					'firstname' => $firstname,
+					'lastname' => $lastname,
+					'address' => $address,
+				];
+				$this->customers_model->saveCustomer($customer);
 
 				// user creation ok
 				$this->load->view('header');

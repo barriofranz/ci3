@@ -38,5 +38,12 @@ class Customers_model extends CI_Model {
 		return $fields;
 	}
 
+	public function saveCustomer($data)
+	{
+
+		$this->db->insert('customers', $data);
+
+		return $this->db->insert_id();
+	}
 
 }

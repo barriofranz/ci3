@@ -20,6 +20,20 @@
 				<h1>Register</h1>
 			</div>
 			<?= form_open() ?>
+
+				<div class="form-group">
+					<label for="username">First name</label>
+					<input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name">
+				</div>
+				<div class="form-group">
+					<label for="username">Last name</label>
+					<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name">
+				</div>
+				<div class="form-group">
+					<label for="username">Address</label>
+					<input type="text" class="form-control" id="address" name="address" placeholder="Address">
+				</div>
+				<br>
 				<div class="form-group">
 					<label for="username">Username</label>
 					<input type="text" class="form-control" id="username" name="username" placeholder="Enter a username">
