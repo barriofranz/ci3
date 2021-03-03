@@ -1,0 +1,7 @@
+.remove-product-to-cart {
+	cursor:pointer;
+}
+
+.delete-order, .edit-order, .create-invoice {
+	cursor:pointer;
+}
